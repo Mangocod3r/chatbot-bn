@@ -1,14 +1,14 @@
 const express = require('express');
-const app = express();
+var app = express();
 const PORT = 4000;
 
-const http = require('http').Server(app);
+var http = require('http').Server(app);
 const cors = require('cors');
 
 
 const socketIO = require('socket.io') (http, {
     cors: {
-        origin: "https://chatapp-001.vercel.app"
+        origin: "*",
     }
 });
 
