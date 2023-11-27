@@ -1,15 +1,14 @@
 const express = require('express');
-var app = express();
+const app = express();
 const PORT = 4000;
 
-var http = require('http').Server(app);
+const http = require('http').Server(app);
 const cors = require('cors');
 
 
 const socketIO = require('socket.io') (http, {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"]
     }
 });
 
