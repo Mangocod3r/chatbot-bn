@@ -13,7 +13,7 @@ var socketIO = require('socket.io') (http, {
         transports: ['websocket', 'polling'],
         credentials: true
     },
-    allowEIO3: true
+    allowEIO4: true
 });
 
 app.use(cors({
