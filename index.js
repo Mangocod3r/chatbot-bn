@@ -9,6 +9,7 @@ const cors = require('cors');
 const socketIO = require('socket.io') (http, {
     cors: {
         origin: "*",
+        methods: ["GET", "POST"]
     }
 });
 
