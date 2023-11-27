@@ -12,7 +12,11 @@ const socketIO = require('socket.io') (http, {
     }
 });
 
-app.use(cors());
+app.use(cors({
+  origin: '*', // Replace with the correct port
+  credentials: true, // You may need this option if you're sending cookies or sessions
+}));
+
 let users = [];
 
 socketIO.on('connection', (socket) => {
