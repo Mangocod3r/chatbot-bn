@@ -8,7 +8,8 @@ const cors = require('cors');
 
 const socketIO = require('socket.io') (http, {
     cors: {
-        origin: ["https://chatapp-001.vercel.app/", "http://localhost:3000", "http://192.168.1.3:3000"],    }
+        origin: "https://chatapp-001.vercel.app"
+    }
 });
 
 app.use(cors());
