@@ -1,14 +1,14 @@
-const express = require('express');
-const app = express();
+var express = require('express');
+var app = express();
 const PORT = 4000;
 
-const http = require('http').Server(app);
+var http = require('http').createServer(app);
 const cors = require('cors');
 
 
-const socketIO = require('socket.io') (http, {
+var socketIO = require('socket.io') (http, {
     cors: {
-        origin: "*",
+        origin: "*"
     }
 });
 
