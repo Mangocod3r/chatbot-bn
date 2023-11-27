@@ -8,8 +8,12 @@ const cors = require('cors');
 
 var socketIO = require('socket.io') (http, {
     cors: {
-        origin: "*"
-    }
+        origin: "*",
+        methods: ["GET", "POST"],
+        transports: ['websocket', 'polling'],
+        credentials: true
+    },
+    allowEIO3: true
 });
 
 app.use(cors({
