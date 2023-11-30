@@ -65,6 +65,13 @@ socketIO.on('connection', (socket) => {
         socketIO.to(room).emit('newUserResponse', Object.values(users));
     });
 
+    socket.on('leaveChat', (data) => {
+        const userName = data.userName;
+        delete users[socket.id];
+        socketIO.emit('newUserResponse', Object.values(users));
+        console.log(`${userName} left the chat`);
+      });
+      
     socket.on('disconnect', () => {
         console.log('A user disconnected');
         // delete users[socket.id];
